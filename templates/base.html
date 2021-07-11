@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-compatible" content="ie=edge">
+<title>sonu project</title>
+</head>
+<style>
+body{
+background-image:url("{% static 'images/EMI.jpg' %}");
+background-repeat:no-repeat;
+background-position:scroll;
+background-size:1550px 780px;
+}
+.pix{
+text-align:center;
+font-size: 56px;
+list-style-type: none;
+}
+.gen{
+font-size: 30px;
+list-style-type: none;
+}
+.box{
+height: 210px;
+width: 500px;
+background-color: #73b504;
+margin-left:75px;
+margin-top:75px;
+padding-left:45px;
+padding-top:15px;
+border-style:double;
+border-width:5px;
+border-color:black;
+font-size:24px;
+}
+</style>
+<body class="body">
+{% block content %}
+
+{% endblock  %}
+</body>
+</html>

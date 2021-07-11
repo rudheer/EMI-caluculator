@@ -1,0 +1,55 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-compatible" content="ie=edge">
+<title>Home</title>
+</head>
+<style>
+body{
+background-image:url("{% static 'images/EMI.jpg' %}");
+background-repeat:no-repeat;
+background-position:scroll;
+background-size:1550px 780px;
+}
+.pix{
+text-align:center;
+font-size: 56px;
+list-style-type: none;
+}
+.gen{
+font-size: 30px;
+list-style-type: none;
+}
+.box{
+height: 210px;
+width: 500px;
+background-color: #73b504;
+margin-left:75px;
+margin-top:75px;
+padding-left:25px;
+padding-top:15px;
+border-style:double;
+border-width:5px;
+border-color:black;
+}
+</style>
+<body class="body">
+<li class="pix">EMI calculator</li><br>
+<li class="gen">you can calculate the monthly EMI that gonna cost you from here.</li>
+<div class="box">
+<form style="font-size:24px" method="POST" action="doit">
+{% csrf_token %}
+enter the principal amount:
+<input type="text" name="num1"> /-<br><br>
+enter the Annual intrest rate:
+<input type="text" name="num2"> %<br><br>
+enter the number of years:
+<input type="text" name="num3"> years<br><br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <button>submit</button>
+</form>
+</div>
+<body>
+</html>

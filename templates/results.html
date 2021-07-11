@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<li class="pix">EMI calculator</li><br>
+<li class="gen"> The monthly EMI that gonna cost you is</li>
+<div class="box">
+the principal amount is:{{p}} /-<br><br>
+the annual intrest rate is:{{r}} %<br><br>
+the number of years is:{{t}} years<br><br>
+the EMI will be:{{result}} /- per month
+</div>
+{% endblock %}
